@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from "@/components/HeaderComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  // data(){
+  //   return {
+  //     indirizzoApi: "https://flynn.boolean.careers/exercises/api/array/music",
+  //   }
+  // }
   components: {
-    HelloWorld
-  }
-}
+    HeaderComponent,
+  },
+};
 </script>
 
 <style lang="scss">
