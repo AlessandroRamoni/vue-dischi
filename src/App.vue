@@ -1,33 +1,36 @@
 <template>
   <div id="app">
     <HeaderComponent />
+    <MainComponent :insiemeDelleImmagini="arrayAppoggio" />
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import MainComponent from "@/components/MainComponent.vue";
 
 export default {
   name: "App",
   data() {
     return {
-      indirizzoApi: "https://flynn.boolean.careers/exercises/api/array/",
+      indirizzoApi: "https://flynn.boolean.careers/exercises/api/array/music",
       arrayAppoggio: [],
     };
   },
   created() {
     console.log("caricamento dati");
-    axios.get(this.indirizzoApi + "music").then(({ status, data }) => {
+    axios.get(this.indirizzoApi).then(({ status, data }) => {
       if (status === 200) {
-        this.arrayAppoggio = data;
+        this.arrayAppoggio = data.response;
+        console.log(data.response);
       }
-      console.log(data);
     });
   },
 
   components: {
     HeaderComponent,
+    MainComponent,
   },
 };
 </script>
