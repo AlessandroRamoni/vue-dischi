@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>holaaaaaaaaaaaa</h1>
+    <img src="../assets/img/logospotify.webp" alt="" />
   </header>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h1 {
-  color: red;
+img {
+  width: 80px;
 }
 </style>
