@@ -22,6 +22,7 @@ export default {
       indirizzoApi: "https://flynn.boolean.careers/exercises/api/array/music",
       arrayAppoggio: [],
       loading: true,
+      textToFilter: "",
     };
   },
   created() {
@@ -43,10 +44,11 @@ export default {
   methods: {
     filterCharacters(textToFilter) {
       this.textToFilter = textToFilter;
-      console.log(textToFilter);
       const array = [];
       this.arrayAppoggio.forEach((item) => {
-        if (item.genre.indexOf(textToFilter.trim()) > -1) {
+        if (
+          item.genre.toLowerCase().includes(this.textToFilter.toLowerCase())
+        ) {
           array.push(item);
         }
       });
