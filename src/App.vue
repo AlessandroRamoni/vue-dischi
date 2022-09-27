@@ -2,7 +2,10 @@
   <div id="app">
     <HeaderComponent />
     <!-- <LoaderComponent /> -->
-    <MainComponent :insiemeDelleImmagini="arrayAppoggio" />
+    <MainComponent
+      :insiemeDelleImmagini="arrayAppoggio"
+      @search="filterCharacters"
+    />
   </div>
 </template>
 
@@ -37,6 +40,22 @@ export default {
         // this.loading = false;
       });
   },
+  methods: {
+    filterCharacters(textToFilter) {
+      this.textToFilter = textToFilter;
+      console.log(textToFilter);
+      const array = [];
+      this.arrayAppoggio.forEach((item) => {
+        if (item.genre.indexOf(textToFilter.trim()) > -1) {
+          array.push(item);
+        }
+      });
+      this.arrayAppoggio = array;
+    },
+  },
+  /*
+      
+    */
 
   components: {
     HeaderComponent,

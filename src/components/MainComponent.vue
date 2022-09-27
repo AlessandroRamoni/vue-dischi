@@ -5,7 +5,7 @@
       :key="index"
       :immagine="copertina.poster"
       :titolo="copertina.title"
-      :anno="copertina.year"
+      :genere="copertina.genre"
       :autore="copertina.author"
     />
     <input type="text" v-model="searchText" @keyup.enter="doSearch()" />

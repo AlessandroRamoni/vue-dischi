@@ -4,7 +4,7 @@
       <img :src="immagine" />
       <h3>{{ titolo }}</h3>
       <p>{{ autore }}</p>
-      <p>{{ anno }}</p>
+      <p>{{ genere }}</p>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   props: {
     immagine: String,
     titolo: String,
-    anno: String,
+    genere: String,
     autore: String,
   },
 };
