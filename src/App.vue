@@ -49,9 +49,10 @@ export default {
 <style lang="scss">
 @import "./assets/style/generics.scss";
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+$ColoreSfondo: #1e2d3b;
 #app {
   height: calc(100vh);
-  background-color: #1e2d3b;
+  background-color: $ColoreSfondo;
   font-family: "Luckiest Guy", cursive;
 }
 </style>
